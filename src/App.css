@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background: whitesmoke;
+}
+
+/* quick reset so all our padding is the right size */
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  padding-top: 0;
+  margin-top: 0;
+  color: black;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.calculator {
+  max-width: 320px;
+  background: #eee;
+  background: white;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  background: rgb(200, 200, 200);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calc-numbers {
+  background: black;
+  color: white;
+  font-size: 2em;
+  border: 0;
+  padding: 0.3em;
+  text-align: right;
+  width: 100%;
+  height: 100px;
+  font-family: Poppins, sans-serif;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.span-3 {
+  grid-column: span 3;
+}
+
+.btn {
+  font-family: Poppins, sans-serif;
+  font-size: 1em;
+  height: 65px;
+}
+
+.clear {
+  background-color: rgb(151, 3, 3);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background: rgb(185, 145, 145);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:active {
+  background: rgb(78, 64, 64);
+}
+
+.orange {
+  background-color: orange;
 }
